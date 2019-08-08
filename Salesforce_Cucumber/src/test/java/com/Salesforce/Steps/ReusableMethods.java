@@ -11,27 +11,27 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+//import com.relevantcodes.extentreports.ExtentReports;
+//import com.relevantcodes.extentreports.ExtentTest;
+//import com.relevantcodes.extentreports.LogStatus;
 
 public class ReusableMethods {
 
 	static WebDriver driver;
-	static ExtentTest logger;
+	//static ExtentTest logger;
 
 
 	static String filename =new SimpleDateFormat("'SFDCExtentReport_'yyyyMMddHHmm'.html'").format(new Date()); 
 	static String path ="C:\\Users\\shank\\Documents\\SalesForceTesting\\ReportGenerated\\"+filename;
-	static ExtentReports reports = new ExtentReports(path);
+	//static ExtentReports reports = new ExtentReports(path);
 	//String path = "C:\\Users\\shank\\Documents\\SalesForceTesting\\ReportGenerated\\SDFCUserMenuTC7.html" ;
 	//reports = new ExtentReports(path);
 
 
-	public static ExtentTest CreateReport(String ReportName) {
-		logger = reports.startTest(ReportName);
-		return logger;
-	}
+	//public static ExtentTest CreateReport(String ReportName) {
+	//	logger = reports.startTest(ReportName);
+	//	return logger;
+	//}
 
 	/*Name of the method: enterText
 	 * Brief Description: Enter the text into text box
@@ -48,11 +48,11 @@ public class ReusableMethods {
 		if(obj.isEnabled()) {
 			obj.sendKeys(text);
 			System.out.println("pass "+ text +" is enetered in "+ objectName + " field");
-			logger.log(LogStatus.PASS,text +"value is entered in " +objectName + "field" );
+			//logger.log(LogStatus.PASS,text +"value is entered in " +objectName + "field" );
 		}
 		else{
 			System.out.println("Fail "+ objectName + "isnot enabled , please check the appliocation");
-			logger.log(LogStatus.FAIL,text +objectName +"Field doesnot exist please check the application" );
+			//logger.log(LogStatus.FAIL,text +objectName +"Field doesnot exist please check the application" );
 		}
 	}
 
@@ -72,11 +72,11 @@ public class ReusableMethods {
 		if(obj.isEnabled()) {
 			obj.click();
 			System.out.println("pass " + objectName + " is clicked");
-			logger.log(LogStatus.PASS,objectName + " is clicked");
+			//logger.log(LogStatus.PASS,objectName + " is clicked");
 		}
 		else{
 			System.out.println("Fail "+ objectName + "is not clicked , please check the appliocation");
-			logger.log(LogStatus.FAIL,objectName + "is not clicked , please check the appliocation");
+			//logger.log(LogStatus.FAIL,objectName + "is not clicked , please check the appliocation");
 		}
 	}
 
@@ -137,10 +137,10 @@ public class ReusableMethods {
 			System.out.println("Actual Message is "+ actuallMessage);
 			if(actuallMessage.equals(ExpectedMessage)) {
 				System.out.println("Pass: "+ ObjName +" ExpectedMessage matches the actual message");
-				logger.log(LogStatus.PASS, ObjName +" ExpectedMessage matches the actual message");
+				//logger.log(LogStatus.PASS, ObjName +" ExpectedMessage matches the actual message");
 			}else {
 				System.out.println("Fail: "+ ObjName + " does not matches the actual message");
-				logger.log(LogStatus.FAIL,ObjName +"ExpectedMessage does not matches the actual message");
+				//logger.log(LogStatus.FAIL,ObjName +"ExpectedMessage does not matches the actual message");
 			}
 			//System.out.println("Pass: " + ObjName + "is clicked" );
 		}else {
@@ -196,11 +196,11 @@ public class ReusableMethods {
 
 		if(!Name.isEmpty()) {
 			System.out.println("PASS" + Name +" value is entered in " + ObjName + " field");
-			logger.log(LogStatus.PASS,Name +" value is entered in " + ObjName + " field" );
+			//logger.log(LogStatus.PASS,Name +" value is entered in " + ObjName + " field" );
 		}
 		else{
 			System.out.println("Fail "+ Name + "isnot enabled , please check the appliocation");
-			logger.log(LogStatus.FAIL,Name +"Field doesnot exist please check the application" );
+			//logger.log(LogStatus.FAIL,Name +"Field doesnot exist please check the application" );
 		}
 	}
 
@@ -220,11 +220,11 @@ public class ReusableMethods {
 		System.out.println("All the items Matched");
 		if(!options.isEmpty()) {
 			System.out.println("PASS"+" Expected values matches Actual values");
-			logger.log(LogStatus.PASS ,"Expected values matches Actual values" );
+			//logger.log(LogStatus.PASS ,"Expected values matches Actual values" );
 		}
 		else{
 			System.out.println("Fail "+ "Expected values does not matches Actual values");
-			logger.log(LogStatus.FAIL," Expected values does not matches Actual values" );
+			//logger.log(LogStatus.FAIL," Expected values does not matches Actual values" );
 		}
 
 
@@ -242,11 +242,11 @@ public class ReusableMethods {
 
 		if(!options.isEmpty()) {
 			System.out.println("Pass : All " + ObjName + " items are selected");
-			logger.log(LogStatus.PASS, "All " + ObjName + " items are selected" );
+			//logger.log(LogStatus.PASS, "All " + ObjName + " items are selected" );
 		}
 		else{
 			System.out.println("Fail: All " + ObjName + " items are not selected");
-			logger.log(LogStatus.FAIL,"All " + ObjName + " items are not selected" );
+			//logger.log(LogStatus.FAIL,"All " + ObjName + " items are not selected" );
 		}
 	}
 
@@ -272,11 +272,11 @@ public class ReusableMethods {
 		System.out.println("option is selected");
 		if(!Name.isEmpty()) {
 			System.out.println("PASS" + Name +" value is entered in " + ObjName + " field");
-			logger.log(LogStatus.PASS,Name +" value is entered in " + ObjName + " field" );
+			//logger.log(LogStatus.PASS,Name +" value is entered in " + ObjName + " field" );
 		}
 		else{
 			System.out.println("Fail "+ Name + "isnot enabled , please check the appliocation");
-			logger.log(LogStatus.FAIL,Name +"Field doesnot exist please check the application" );
+			//logger.log(LogStatus.FAIL,Name +"Field doesnot exist please check the application" );
 		}
 	}
 
@@ -294,11 +294,11 @@ public class ReusableMethods {
 		System.out.println("option is selected");
 		if(!value.isEmpty()) {
 			System.out.println("PASS" + ObjName +" value is entered in " + ObjName + " field");
-			logger.log(LogStatus.PASS,ObjName +" value is entered in " + ObjName + " field" );
+			//logger.log(LogStatus.PASS,ObjName +" value is entered in " + ObjName + " field" );
 		}
 		else{
 			System.out.println("Fail "+ ObjName + "isnot enabled , please check the appliocation");
-			logger.log(LogStatus.FAIL,ObjName +"Field doesnot exist please check the application" );
+			//logger.log(LogStatus.FAIL,ObjName +"Field doesnot exist please check the application" );
 		}
 	}
 

@@ -1,7 +1,7 @@
 
 Feature: Salesforce Testing
  
-  Scenario: TC01: Login Error Message 
+  Scenario: TC01: Login Error Message
     Given Launch the Salesforce login page
     When User enters the valid user name in username field
     And user  keeps the password field empty
