@@ -16,14 +16,9 @@ import cucumber.api.java.en.When;
 public class SFDC_Steps  extends  ReusableMethods {
 	static WebDriver driver;
 
-	@AfterTest
-	public static void logger() {
-		ReusableMethods.reports.endTest(logger);
-		ReusableMethods.reports.flush();
-	}
+	
 
-
-	@Test(priority=1,enabled = false)
+	//@Test()
 	public static void initialize_Driver() {
 		System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
 
@@ -42,7 +37,7 @@ public class SFDC_Steps  extends  ReusableMethods {
 
 	@When("^User enters the valid user name in username field$")
 	public void user_enters_the_valid_user_name_in_username_field() throws Throwable {
-		CreateReport("user_enters_the_valid_user_name_in_username_field");
+		
 		WebElement UserName = driver.findElement(By.xpath("//input[@id='username']"));
 		entertext(UserName,"annigerinagaratna-gqwh@force.com","UserName");
 	}
